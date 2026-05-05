@@ -31,7 +31,7 @@ If `decisions.md` is missing or sparse, use `git log --oneline` for feature-rela
 
 ## Step 4: Update Project Knowledge
 
-If `.claude/skills/project-knowledge/references/` does not exist or is empty — skip this step, inform the user that project knowledge has not been initialized.
+If `.opencode/skills/project-knowledge/references/` does not exist or is empty — skip this step, inform the user that project knowledge has not been initialized.
 
 Otherwise, read current PK files and update only those affected by the feature:
 - `architecture.md` — new components, changed structure, data model / schema changes

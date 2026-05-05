@@ -23,9 +23,9 @@ Validate tech-spec template compliance at the provided path.
 Read these files:
 - `{feature_path}/tech-spec.md`
 - `{feature_path}/user-spec.md` (if exists — for Acceptance Criteria presence check)
-- `.claude/skills/project-knowledge/references/architecture.md` (if exists)
-- `.claude/skills/project-knowledge/references/patterns.md` (if exists)
-- `~/.claude/skills/tech-spec-planning/references/skills-and-reviewers.md` (for task quality checks)
+- `.opencode/skills/project-knowledge/references/architecture.md` (if exists)
+- `.opencode/skills/project-knowledge/references/patterns.md` (if exists)
+- `~/.opencode/skills/tech-spec-planning/references/skills-and-reviewers.md` (for task quality checks)
 
 Validate against criteria below. For each violation, create a finding.
 
@@ -84,7 +84,7 @@ Skip if Project Knowledge files are absent — create a suggestion finding.
 Each task contains full information:
 - **Description** — what and why (scope description, not detailed implementation steps)
 - **Skill** — specified
-- **Reviewers** — specified, not empty. Each reviewer is an existing agent (verify via Glob: `~/.claude/agents/{name}.md`)
+- **Reviewers** — specified, not empty. Each reviewer is an existing agent (verify via Glob: `~/.opencode/agents/{name}.md`)
 - **Verify-smoke** / **Verify-user** — present if task has external integration, infra, UI, or LLM work (see section 5b)
 - **Files to modify** — concrete file paths
 - **Files to read** — concrete file paths for context
@@ -102,7 +102,7 @@ If >15 tasks — create a finding recommending split into MVP + Extension.
 
 Go beyond field presence — check that task content is correct and appropriate for tech-spec level.
 
-Read `~/.claude/skills/tech-spec-planning/references/skills-and-reviewers.md` for the authoritative skills and reviewers catalog.
+Read `~/.opencode/skills/tech-spec-planning/references/skills-and-reviewers.md` for the authoritative skills and reviewers catalog.
 
 ### 8a. Skill Correctness
 

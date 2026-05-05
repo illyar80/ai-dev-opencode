@@ -46,7 +46,7 @@ List items like:
 
 1. **Настроить deployment для dev→staging:**
 
-<!-- LLM: Read .claude/skills/project-knowledge/references/deployment.md and fill deployment info:
+<!-- LLM: Read .opencode/skills/project-knowledge/references/deployment.md and fill deployment info:
 - Platform (VPS/Railway/Vercel/Fly.io/etc)
 - If VPS: SSH access details, server IP for staging
 - If cloud platform: specify which one
@@ -68,7 +68,7 @@ List items like:
    - Smoke tests, integration tests
    - User acceptance testing
 
-<!-- LLM: Read .claude/skills/project-knowledge/references/deployment.md and list required GitHub Secrets.
+<!-- LLM: Read .opencode/skills/project-knowledge/references/deployment.md and list required GitHub Secrets.
 Format as markdown list with secret names and descriptions.
 Example:
 - SSH_PRIVATE_KEY - для деплоя на VPS
@@ -102,7 +102,7 @@ Example:
    - Добавить deployment job для main branch → production
    - Добавить production secrets в GitHub
 
-<!-- LLM: Read .claude/skills/project-knowledge/references/deployment.md and suggest appropriate deployment strategy.
+<!-- LLM: Read .opencode/skills/project-knowledge/references/deployment.md and suggest appropriate deployment strategy.
 Consider project size, traffic, downtime tolerance.
 Default for small projects: simple deployment
 For larger projects: suggest blue-green or canary
@@ -116,7 +116,7 @@ For larger projects: suggest blue-green or canary
    - [ ] Rolling deployment (обновление по одному instance)
    - [ ] Simple deployment (маленькие проекты, короткий downtime ok)
 
-<!-- LLM: Read .claude/skills/project-knowledge/references/deployment.md and suggest monitoring setup.
+<!-- LLM: Read .opencode/skills/project-knowledge/references/deployment.md and suggest monitoring setup.
 Include what monitoring tools/services are mentioned or recommend appropriate ones.
 -->
 5. **Мониторинг после deploy:**
@@ -132,7 +132,7 @@ Include what monitoring tools/services are mentioned or recommend appropriate on
 
 ## Rollback Plan
 
-<!-- LLM: Read .claude/skills/project-knowledge/references/deployment.md for rollback procedures.
+<!-- LLM: Read .opencode/skills/project-knowledge/references/deployment.md for rollback procedures.
 If not specified there, provide standard git-based rollback for the platform.
 -->
 

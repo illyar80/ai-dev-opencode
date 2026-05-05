@@ -24,7 +24,7 @@ You will receive:
 - **Files for review**: List of modified/created files
 - **userspec**: User requirements and expected functionality
 - **techspec**: Technical specifications and implementation details
-- **Project context**: Files from .claude/skills/project-knowledge/references describing project architecture, standards, and patterns
+- **Project context**: Files from .opencode/skills/project-knowledge/references describing project architecture, standards, and patterns
 
 ## Output Format
 
@@ -94,4 +94,4 @@ These patterns are always the specified severity — no judgment needed:
 
 ### Project patterns check
 
-If `.claude/skills/project-knowledge/references/patterns.md` exists — read it. For each reviewed file: verify naming, structure, error handling match documented patterns. Deviation from patterns.md without justification → severity `major`.
+If `.opencode/skills/project-knowledge/references/patterns.md` exists — read it. For each reviewed file: verify naming, structure, error handling match documented patterns. Deviation from patterns.md without justification → severity `major`.

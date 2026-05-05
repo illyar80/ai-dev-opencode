@@ -23,7 +23,7 @@ From orchestrator prompt:
 ## Process
 
 1. Read `{feature_path}/logs/userspec/interview.yml`
-2. Read all PK files: Glob `.claude/skills/project-knowledge/references/*.md`, read each
+2. Read all PK files: Glob `.opencode/skills/project-knowledge/references/*.md`, read each
 3. Read `{feature_path}/code-research.md` (if exists)
 4. Evaluate across all 5 dimensions below
 5. Return JSON verdict

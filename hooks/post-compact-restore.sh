@@ -39,7 +39,7 @@ TEAM_NAME=$(awk '/^team_name:/{sub(/^team_name:[[:space:]]*/,""); gsub(/["'"'"']
 # Check if this session is the team lead.
 # If team config exists — verify session_id matches lead.
 # If team config is gone — still output recovery context (team needs to be recreated).
-TEAM_CONFIG="$HOME/.claude/teams/$TEAM_NAME/config.json"
+TEAM_CONFIG="$HOME/.opencode/teams/$TEAM_NAME/config.json"
 if [ -f "$TEAM_CONFIG" ]; then
   LEAD_SESSION=$(jq -r '.leadSessionId // empty' "$TEAM_CONFIG")
   [ "$LEAD_SESSION" != "$SESSION_ID" ] && exit 0

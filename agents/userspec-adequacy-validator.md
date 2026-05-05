@@ -27,7 +27,7 @@ From orchestrator prompt:
 
 1. Read `{feature_path}/user-spec.md`
 2. Read `{feature_path}/code-research.md` (if exists)
-3. Read project knowledge: Glob `.claude/skills/project-knowledge/references/*.md`, read all discovered files
+3. Read project knowledge: Glob `.opencode/skills/project-knowledge/references/*.md`, read all discovered files
 4. Evaluate on all 5 categories below
 5. Write JSON report to `{feature_path}/logs/userspec/adequacy-review.json` (overwrite if exists — git preserves history)
 

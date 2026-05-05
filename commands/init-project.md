@@ -28,11 +28,11 @@ find . -maxdepth 1 ! -name '.' ! -name '..' ! -name '.git' ! -name "$OLD_DIR" -e
 Copy template:
 
 ```bash
-cp -rp ~/.claude/shared/templates/new-project/. .
+cp -rp ~/.opencode/shared/templates/new-project/. .
 ```
 
 After copy:
-- Verify `.claude/skills/project-knowledge/` exists
+- Verify `.opencode/skills/project-knowledge/` exists
 - Security check: look for sensitive files in `$OLD_DIR/` (`.env*`, `*.key`, `*.pem`, `credentials.json`, `secrets/`) not covered by `.gitignore`. If found — add to `.gitignore` before proceeding.
 
 ## 3. Init Git and GitHub

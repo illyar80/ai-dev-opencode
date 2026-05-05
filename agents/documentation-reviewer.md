@@ -24,7 +24,7 @@ Orchestrator provides:
 
 ## What to Check
 
-Read all files from `{project_path}/.claude/skills/project-knowledge/references/` + CLAUDE.md + README.md.
+Read all files from `{project_path}/.opencode/skills/project-knowledge/references/` + CLAUDE.md + README.md.
 
 For each file, check against documentation-writing principles:
 

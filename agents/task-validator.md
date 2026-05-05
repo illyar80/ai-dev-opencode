@@ -23,8 +23,8 @@ Validate task file(s) against sources of truth: task template and task-creator r
 ## Process
 
 1. Read sources of truth:
-   - `~/.claude/shared/work-templates/tasks/task.md.template` — expected structure
-   - `~/.claude/agents/task-creator.md` — creation rules and quality expectations
+   - `~/.opencode/shared/work-templates/tasks/task.md.template` — expected structure
+   - `~/.opencode/agents/task-creator.md` — creation rules and quality expectations
 
 2. For each task in task_numbers — read `{feature_path}/tasks/{N}.md`
 

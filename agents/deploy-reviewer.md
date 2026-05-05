@@ -35,7 +35,7 @@ Determine scope from orchestrator's prompt:
 ### CI/CD Workflow Correctness
 
 - Jobs have correct dependency chain (`needs:` fields)
-- Skip logic covers documentation patterns (`.md`, `.claude/`, `docs/`)
+- Skip logic covers documentation patterns (`.md`, `.opencode/`, `docs/`)
 - Deploy job only runs on main branch push (not on PRs)
 - Actions use pinned major versions (`@v4`, not `@master`)
 - Caching configured for dependency installs

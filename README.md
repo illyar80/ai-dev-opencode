@@ -1,6 +1,6 @@
-# Claude Code Framework
+# OpenCode Framework
 
-Фреймворк для AI-First разработки с [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+Фреймворк для AI-First разработки с [OpenCode](https://opencode.ai/docs).
 
 В основе — spec-driven pipeline: сначала детально планируем работу через интервью с пользователем и исследование кодовой базы, согласуем спецификации, и только потом пишем код. Каждый этап проверяется специализированными агентами-валидаторами. Код пишется через TDD.
 
@@ -24,7 +24,7 @@
 
 ### Документация проекта — Project Knowledge
 
-Вся документация проекта хранится не в CLAUDE.md, а в отдельном скилле **Project Knowledge** — наборе файлов в `.claude/skills/project-knowledge/references/`:
+Вся документация проекта хранится не в CLAUDE.md, а в отдельном скилле **Project Knowledge** — наборе файлов в `.opencode/skills/project-knowledge/references/`:
 
 | Файл | Что внутри |
 |---|---|
@@ -137,7 +137,7 @@ work/{feature}/
 
 Для нового проекта:
 
-1. **`/init-project`** — создаёт структуру проекта из шаблона: папку `.claude/` с Project Knowledge файлами, `CLAUDE.md`, `.gitignore` с правилами для секретов и зависимостей. Инициализирует git-репозиторий, создаёт приватный GitHub-репозиторий через `gh` CLI, делает initial commit, создаёт ветки `main` и `dev`. Если в папке уже есть файлы — предложит переместить их в `old/`.
+1. **`/init-project`** — создаёт структуру проекта из шаблона: папку `.opencode/` с Project Knowledge файлами, `CLAUDE.md`, `.gitignore` с правилами для секретов и зависимостей. Инициализирует git-репозиторий, создаёт приватный GitHub-репозиторий через `gh` CLI, делает initial commit, создаёт ветки `main` и `dev`. Если в папке уже есть файлы — предложит переместить их в `old/`.
 
 2. **`/init-project-knowledge`** — запускает скилл `project-planning`, который проводит подробное интервью о проекте и заполняет все файлы Project Knowledge (`project.md`, `architecture.md`, `patterns.md`, `deployment.md`), а также создаёт бэклог проекта с фичами и roadmap.
 
@@ -252,19 +252,19 @@ work/{feature}/
 
 Папка `shared/` содержит исходные материалы, которые используются скиллами и командами:
 
-| Папка | Что внутри |
-|---|---|
-| `templates/new-project/` | Шаблон нового проекта: структура `.claude/`, Project Knowledge файлы, CLAUDE.md, .gitignore. Используется командой `/init-project` |
-| `templates/infrastructure/` | Шаблоны инфраструктуры (Docker, CI/CD конфиги). Используются скиллом `infrastructure-setup` |
+| Папка | Что внутри                                                                                                                                                                                                                               |
+|---|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `templates/new-project/` | Шаблон нового проекта: структура `.opencode/`, Project Knowledge файлы, CLAUDE.md, .gitignore. Используется командой `/init-project`                                                                                                     |
+| `templates/infrastructure/` | Шаблоны инфраструктуры (Docker, CI/CD конфиги). Используются скиллом `infrastructure-setup`                                                                                                                                              |
 | `work-templates/` | Шаблоны рабочих документов: `user-spec.md.template`, `tech-spec.md.template`, `task.md.template`, `decisions.md.template`, `checkpoint.yml.template`, `execution-plan.md.template`. Скиллы копируют их при создании новых спеков и задач |
-| `interview-templates/` | Структуры интервью для скиллов планирования: `feature.yml` (для user-spec), `skill.yml` (для skill-tester) |
-| `scripts/` | Вспомогательные скрипты: `init-feature-folder.sh` — создание work-директории для новой фичи |
+| `interview-templates/` | Структуры интервью для скиллов планирования: `feature.yml` (для user-spec), `skill.yml` (для skill-tester)                                                                                                                               |
+| `scripts/` | Вспомогательные скрипты: `init-feature-folder.sh` — создание work-директории для новой фичи                                                                                                                                              |
 
 ---
 
 ## Hooks — автоматизация
 
-Папка `hooks/` содержит хуки Claude Code, которые автоматически срабатывают на определённые события:
+Папка `hooks/` содержит хуки OpenCode, которые автоматически срабатывают на определённые события:
 
 | Хук | Событие | Что делает |
 |---|---|---|
@@ -274,7 +274,7 @@ work/{feature}/
 
 ## Требования
 
-- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code)
+- [OpenCode CLI](https://opencode.ai/docs)
 - [Context7 MCP сервер](https://github.com/upstash/context7) — агент использует его для получения актуальной документации библиотек вместо того, чтобы полагаться на данные из обучения
 
 ---
@@ -285,4 +285,4 @@ MIT License — используйте свободно.
 
 ## Автор
 
-Pavel Molyanov — [@pavel-molyanov](https://github.com/pavel-molyanov)
+Illya Rochev — [@illyar80](https://github.com/illyar80)
