@@ -16,7 +16,7 @@ Conduct adaptive interview → make tech decisions → fill all project document
 
 ## Output Files
 
-**Project Knowledge** (`.claude/skills/project-knowledge/references/`):
+**Project Knowledge** (`.opencode/skills/project-knowledge/references/`):
 - **project.md** — overview, audience, problem, key features, scope
 - **architecture.md** — tech stack, project structure, dependencies, data model
 - **patterns.md** — git workflow (code patterns, testing, business rules are filled later during development)
