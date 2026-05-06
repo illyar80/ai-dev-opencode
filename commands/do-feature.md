@@ -11,7 +11,11 @@ Execute a full feature using a team of agents.
 
 ## Step 1: Load Skill
 
-Invoke Skill tool: `Skill(skill: "feature-execution")`
+When user runs `/do-feature {feature-name}`, follow these steps:
+
+**Step 1:** Read the skill file: `skills/feature-execution/SKILL.md`
+
+**Step 2:** Follow the instructions from that file.
 
 ## Step 2: Find Feature
 

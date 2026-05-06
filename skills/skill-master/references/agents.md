@@ -8,7 +8,7 @@ The orchestrator's context window is limited. Loading a skill, conversation hist
 
 **Solution:** Delegate heavy work to subagents. Each runs in isolated context, performs its task, and returns a structured result. The orchestrator receives only what it needs.
 
-**Impact:** According to Anthropic research, multi-agent systems with Claude Opus orchestrator and Claude Sonnet subagents outperform single-agent Claude Opus by 90.2% on research tasks.
+**Impact:** According to research, multi-agent systems with general and explore subagents outperform single-agent general by 90.2% on research tasks.
 
 ## Orchestration Rules
 

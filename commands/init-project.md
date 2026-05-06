@@ -1,10 +1,5 @@
 ---
 description: Initialize project with template, git, and GitHub
-allowed-tools:
-  - Bash(*)
-  - Read
-  - Edit
-  - TodoWrite
 ---
 
 # Init Project
@@ -28,7 +23,7 @@ find . -maxdepth 1 ! -name '.' ! -name '..' ! -name '.git' ! -name "$OLD_DIR" -e
 Copy template:
 
 ```bash
-cp -rp ~/.opencode/shared/templates/new-project/. .
+cp -rp shared/templates/new-project/. .
 ```
 
 After copy:

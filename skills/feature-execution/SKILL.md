@@ -74,7 +74,7 @@ Reason: when the lead does task work, it pollutes context with implementation de
 
    Use `teammate_name` from task frontmatter as the agent name. If not set — pick a descriptive name based on the task.
 
-   **Teammate** — `subagent_type: "general-purpose"`, `model: "opus"`, `team_name: "{team}"`
+   **Teammate** — `subagent_type: "general-purpose"`, `model: "general"`, `team_name: "{team}"`
 
    Prompt template:
 
@@ -121,7 +121,7 @@ Reason: when the lead does task work, it pollutes context with implementation de
 
    Every task gets a spawned teammate — even tasks with no skills and no reviewers (operational tasks, MCP interactions, benchmarks, manual steps). The lead never executes task work directly.
 
-   **Each reviewer** (when present) — `subagent_type: "general-purpose"`, `model: "sonnet"`, `team_name: "{team}"`
+   **Each reviewer** (when present) — `subagent_type: "general-purpose"`, `model: "explore"`, `team_name: "{team}"`
 
    Reviewer skill mapping (reviewer name → skill to load):
    - `code-reviewer` → `code-reviewing`
@@ -157,7 +157,7 @@ Reason: when the lead does task work, it pollutes context with implementation de
 
 ### Audit Wave tasks
 
-Audit Wave tasks (Code Audit, Security Audit, Test Audit) have `reviewers: none` — each auditor teammate IS the review. Spawn them as standard teammates (general-purpose, opus), each loads its methodology skill.
+Audit Wave tasks (Code Audit, Security Audit, Test Audit) have `reviewers: none` — each auditor teammate IS the review. Spawn them as standard teammates (general-purpose, general), each loads its methodology skill.
 
 Each auditor:
 - Reads decisions.md to understand what was done in each task

@@ -63,7 +63,7 @@ These files are your context for the entire interview. Reference them when askin
 
 ### Phase 3: Code Scanning
 
-Launch `code-researcher` subagent (Task tool, opus) with feature path and feature description from Cycle 1.
+Launch `code-researcher` subagent (Task tool, general) with feature path and feature description from Cycle 1.
 
 After subagent completes — read `{feature_path}/code-research.md`. Use findings in Cycle 2 questions.
 
@@ -92,7 +92,7 @@ Run interview loop on remaining gaps.
 
 ### Phase 6: Completeness Check
 
-Launch `interview-completeness-checker` subagent (Task tool, sonnet) with feature path. It reviews interview.yml against PK files and code-research.md.
+Launch `interview-completeness-checker` subagent (Task tool, exlore) with feature path. It reviews interview.yml against PK files and code-research.md.
 
 - `needs_more` → ask the suggested questions, re-run checker
 - `complete` → proceed to Phase 7
@@ -115,8 +115,8 @@ Git commit: `draft(userspec): create user-spec for {feature}`
 ### Phase 8: Validation
 
 Run 2 validators in parallel (Task tool):
-- `userspec-quality-validator` (sonnet) — document structure, template compliance, formal completeness. Returns JSON with per-check pass/fail and findings list.
-- `userspec-adequacy-validator` (opus) — feasibility, over/underengineering, better alternatives. Returns JSON with findings by category and severity.
+- `userspec-quality-validator` (exlore) — document structure, template compliance, formal completeness. Returns JSON with per-check pass/fail and findings list.
+- `userspec-adequacy-validator` (general) — feasibility, over/underengineering, better alternatives. Returns JSON with findings by category and severity.
 
 **Handling findings:**
 - Obvious issue → fix silently

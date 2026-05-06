@@ -1,9 +1,11 @@
 ---
 description: Write code with quality process - TDD, reviews (uses code-writing skill)
-allowed-tools:
-  - Skill
 ---
 
-# Instructions
+# /write-code
 
-Use the `code-writing` skill.
+When user runs `/write-code {feature-name}`, follow these steps:
+
+**Step 1:** Read the skill file: `skills/code-writing/SKILL.md`
+
+**Step 2:** Follow the instructions from that file.

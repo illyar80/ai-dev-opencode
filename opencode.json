@@ -1,0 +1,41 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "command": {
+    "done": {
+      "template": "@commands/done.md",
+      "description": "Finalize a completed feature: read specs and decisions, update project knowledge files, archive feature directory to work/completed/.\n\nUse when: \"фича готова\", \"заверши фичу\", \"done\", \"финализация\", \"закрой фичу\", \"перенеси в completed\""
+    },
+    "do-task": {
+      "template": "@commands/do-task.md",
+      "description": "Execute task from tasks/*.md with quality gates.\n\nUse when: \"выполни задачу\", \"сделай таску\", \"do task\", \"execute task\", \"запусти задачу\""
+    },
+    "do-feature": {
+      "template": "@commands/do-feature.md",
+      "description": "Execute feature with team of agents — waves, reviews, commits.\n\nUse when: \"выполни фичу\", \"do feature\", \"execute feature\", \"запусти фичу\""
+    },
+    "init-project-knowledge": {
+      "template": "@commands/init-project-knowledge.md",
+      "description": "Первичное заполнение документации проекта"
+    },
+    "decompose-tech-spec": {
+      "template": "@commands/decompose-tech-spec.md",
+      "description": "Decompose approved tech-spec into tasks with validation"
+    },
+    "write-code": {
+      "template": "@commands/write-code.md",
+      "description": "Write code with quality process - TDD, reviews (uses code-writing skill)"
+    },
+    "new-tech-spec": {
+      "template": "@commands/new-tech-spec.md",
+      "description": "Create technical specification and tasks (uses tech-spec-planning skill)"
+    },
+    "new-user-spec": {
+      "template": "@commands/new-user-spec.md",
+      "description": "Create user specification through adaptive interview"
+    },
+    "init-project": {
+      "template": "@commands/init-project.md",
+      "description": "Initialize a new project from template"
+    }
+  }
+}

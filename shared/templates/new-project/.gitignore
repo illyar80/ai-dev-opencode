@@ -12,7 +12,7 @@ secrets/
 *secret*
 
 # Local settings (not shared)
-.claude/settings.local.json
+.opencode/opencode.json
 
 # Dependencies
 node_modules/

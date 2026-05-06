@@ -286,3 +286,8 @@ MIT License — используйте свободно.
 ## Автор
 
 Illya Rochev — [@illyar80](https://github.com/illyar80)
+
+Inspired by molyanov-ai-dev:
+https://github.com/pavel-molyanov/molyanov-ai-dev
+
+Modified for OpenCode.

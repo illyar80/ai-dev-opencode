@@ -35,7 +35,7 @@ Create technical specification through code research, adaptive clarification, an
 
 ## Phase 2: Code Research
 
-Launch `code-researcher` subagent (Task tool, opus) with feature path and user-spec path. The agent reads existing `code-research.md` (from user-spec phase if available) and deepens analysis for implementation.
+Launch `code-researcher` subagent (Task tool, general) with feature path and user-spec path. The agent reads existing `code-research.md` (from user-spec phase if available) and deepens analysis for implementation.
 
 After subagent completes — read `{feature_path}/code-research.md`. Use in Phase 3 clarification and Phase 4 spec writing.
 

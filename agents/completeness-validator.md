@@ -8,7 +8,7 @@ description: |
 
   Use when: validating tech-spec completeness, checking task coverage before implementation.
   Not for: template compliance (tech-spec-validator), code review, individual task quality.
-model: sonnet
+model: explore
 color: yellow
 allowed-tools: Read, Glob, Grep, Write
 ---

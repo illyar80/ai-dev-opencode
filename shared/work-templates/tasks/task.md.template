@@ -42,10 +42,10 @@ teammate_name:                     # косметическое имя тимм�
 - [user-spec.md](../user-spec.md)
 - [tech-spec.md](../tech-spec.md)
 - [decisions.md](../decisions.md)
-- [architecture.md](~/.claude/skills/project-knowledge/architecture.md)
-- [patterns.md](~/.claude/skills/project-knowledge/patterns.md)
-- [project.md](~/.claude/skills/project-knowledge/project.md)
-- [testing.md](~/.claude/skills/project-knowledge/testing.md)
+- [architecture.md](~/.opencode/skills/project-knowledge/architecture.md)
+- [patterns.md](~/.opencode/skills/project-knowledge/patterns.md)
+- [project.md](~/.opencode/skills/project-knowledge/project.md)
+- [testing.md](~/.opencode/skills/project-knowledge/testing.md)
 - [другие файлы по необходимости — БД, API, деплой, конкретные файлы кода]
 
 ## Verification Steps

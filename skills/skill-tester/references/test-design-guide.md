@@ -130,7 +130,7 @@ Default persona (do not change unless user explicitly asks):
       "expected_output": "Description of expected result",
       "files": [],
       "persona_modifications": [],
-      "model": "opus",
+      "model": "general",
       "assertions": [
         {
           "id": "process-1",

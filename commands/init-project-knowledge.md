@@ -2,10 +2,10 @@
 description: Первичное заполнение документации проекта
 ---
 
-# Instructions
+# /init-project-knowledge
 
-Load and execute `project-planning` skill.
+When user runs `/init-project-knowledge`, follow these steps:
 
-```
-Skill(project-planning)
-```
+**Step 1:** Read the skill file: `skills/project-planning/SKILL.md`
+
+**Step 2:** Follow the instructions from that file.

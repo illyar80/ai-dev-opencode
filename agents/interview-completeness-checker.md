@@ -6,7 +6,7 @@ description: |
 
   Use when: orchestrator reaches completeness gate after interview cycles,
   before creating user-spec draft.
-model: sonnet
+model: explore
 color: green
 allowed-tools: Read, Glob, Grep
 ---

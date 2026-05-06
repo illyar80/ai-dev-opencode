@@ -4,13 +4,13 @@ These fields are NOT required for most skills. Use only when needed.
 
 ## Field Reference
 
-| Field | Default | Description |
-|-------|---------|-------------|
-| `argument-hint` | None | Autocomplete hint shown after skill name |
-| `disable-model-invocation` | `false` | If `true`, skill only triggers manually via `/skill-name` |
+| Field | Default | Description                                                   |
+|-------|---------|---------------------------------------------------------------|
+| `argument-hint` | None | Autocomplete hint shown after skill name                      |
+| `disable-model-invocation` | `false` | If `true`, skill only triggers manually via `/skill-name`     |
 | `user-invocable` | `true` | If `false`, skill hidden from `/` menu, only Claude can invoke |
-| `allowed-tools` | All tools | Restrict which tools the skill can use |
-| `model` | `inherit` | Override model: `sonnet`, `opus`, `haiku`, `inherit` |
+| `allowed-tools` | All tools | Restrict which tools the skill can use                        |
+| `model` | `inherit` | Override model: `exlore`, `general`, `inherit`        |
 
 ## When to Use Each Field
 
@@ -73,14 +73,13 @@ Overrides the model used for this skill.
 ```yaml
 ---
 name: quick-lookup
-model: haiku
+model: explore
 ---
 ```
 
 Options:
 - `inherit` — use orchestrator's model (default, recommended)
-- `sonnet` — fast, good for most tasks
-- `opus` — best quality, use for complex reasoning
-- `haiku` — fastest, use for simple lookups
+- `explore` — fast, good for most tasks
+- `general` — best quality, use for complex reasoning
 
 Use sparingly. `inherit` is usually best.

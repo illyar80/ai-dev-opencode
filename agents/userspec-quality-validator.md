@@ -9,7 +9,7 @@ description: |
 
   Use when: orchestrator reaches quality-review gate in user-spec workflow,
   user-spec draft is ready for validation before user approval.
-model: sonnet
+model: explore
 color: yellow
 allowed-tools: Read, Glob, Grep
 ---

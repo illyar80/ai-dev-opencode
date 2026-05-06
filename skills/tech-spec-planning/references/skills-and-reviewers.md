@@ -26,15 +26,15 @@ Prompt tasks (LLM system prompts, user templates) use `prompt-master` skill — 
 
 ## Reviewer Agents
 
-| Agent | What it checks | Model |
-|-------|---------------|-------|
-| `code-reviewer` | Code quality: structure, patterns, naming, complexity, error handling | sonnet |
-| `security-auditor` | OWASP Top 10, injection, XSS, auth, input validation, secrets | sonnet |
-| `test-reviewer` | Test quality: coverage, meaningful assertions, test pyramid balance | sonnet |
-| `skill-checker` | Skill compliance: frontmatter, structure, skill-master guidelines | sonnet |
-| `prompt-reviewer` | Prompt quality: clarity, positive framing, examples over rules, compression, XML structure, success criteria | sonnet |
-| `infrastructure-reviewer` | Infrastructure setup quality: folder structure, pre-commit, Docker, .gitignore, testing | sonnet |
-| `deploy-reviewer` | CI/CD pipeline and deployment config quality: workflows, secrets, platform config | sonnet |
+| Agent | What it checks | Model   |
+|-------|---------------|---------|
+| `code-reviewer` | Code quality: structure, patterns, naming, complexity, error handling | explore |
+| `security-auditor` | OWASP Top 10, injection, XSS, auth, input validation, secrets | explore  |
+| `test-reviewer` | Test quality: coverage, meaningful assertions, test pyramid balance | explore  |
+| `skill-checker` | Skill compliance: frontmatter, structure, skill-master guidelines | explore  |
+| `prompt-reviewer` | Prompt quality: clarity, positive framing, examples over rules, compression, XML structure, success criteria | explore  |
+| `infrastructure-reviewer` | Infrastructure setup quality: folder structure, pre-commit, Docker, .gitignore, testing | explore  |
+| `deploy-reviewer` | CI/CD pipeline and deployment config quality: workflows, secrets, platform config | explore  |
 
 ## Skill → Reviewers Mapping
 
