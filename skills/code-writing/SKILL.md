@@ -23,11 +23,11 @@ description: |
    **Working on a task?** Read all files listed in the task's "Context" section — it already specifies everything needed.
 
    **Standalone (no task file)?** Read (skip if missing):
-   - `.claude/skills/project-knowledge/references/project.md` — project overview
-   - `.claude/skills/project-knowledge/references/architecture.md` — system structure
-   - `.claude/skills/project-knowledge/references/patterns.md` — project conventions
+   - `.opencode/skills/project-knowledge/references/project.md` — project overview
+   - `.opencode/skills/project-knowledge/references/architecture.md` — system structure
+   - `.opencode/skills/project-knowledge/references/patterns.md` — project conventions
 
-   Then read `.claude/skills/project-knowledge/SKILL.md` (if exists).
+   Then read `.opencode/skills/project-knowledge/SKILL.md` (if exists).
    Consider which domain-specific guides are relevant to your task and read those
    (e.g., `architecture.md` Data Model section for DB work, `ux-guidelines.md` for UI tasks).
 

@@ -26,9 +26,9 @@ Decompose tech-spec Implementation Tasks into individual task files with paralle
 
 4. Note the task template path: `shared/work-templates/tasks/task.md.template`
 
-5. Read skills/reviewers catalog from [skills-and-reviewers.md](~/.claude/skills/tech-spec-planning/references/skills-and-reviewers.md) — for passing correct skills/reviewers to task-creators.
+5. Read skills/reviewers catalog from [skills-and-reviewers.md](/skills/tech-spec-planning/references/skills-and-reviewers.md) — for passing correct skills/reviewers to task-creators.
 
-6. For each task in Implementation Tasks — launch [`task-creator`](~/.claude/agents/task-creator.md) subagent in parallel.
+6. For each task in Implementation Tasks — launch [`task-creator`](agents/task-creator.md) subagent in parallel.
    Pass each task-creator:
    - feature_path, task_number, task_name
    - template_path: `shared/work-templates/tasks/task.md.template`
@@ -67,7 +67,7 @@ Launch both in parallel:
 
 1. Launch both validators in parallel (task-validator in batches of 5, reality-checker in batches of 3).
 2. Read JSON reports, collect findings.
-3. If issues found — for each task with issues, launch [`task-creator`](~/.claude/agents/task-creator.md) in fix mode:
+3. If issues found — for each task with issues, launch [`task-creator`](agents/task-creator.md) in fix mode:
    - Pass: same inputs as creation + `mode: fix` + `findings` from validators
    - task-creator reads existing task, applies fixes, overwrites file
 4. After each validation round, git commit: `chore(tasks): validation round {N} — {summary}`

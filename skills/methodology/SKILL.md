@@ -154,7 +154,7 @@ Tasks can be code, user-action, deploy, config, or verification. Task nature is 
 
 ### Project Knowledge — the Knowledge Base
 
-All project documentation lives in `.claude/skills/project-knowledge/references/`. This is the single source of truth for everything about the project.
+All project documentation lives in `.opencode/skills/project-knowledge/references/`. This is the single source of truth for everything about the project.
 
 **4 core + optional files:**
 
@@ -190,10 +190,10 @@ work/{feature}/
 
 Completed features are archived to `work/completed/{feature}/`.
 
-### Global Structure `~/.claude/`
+### Global Structure `/`
 
 ```
-~/.claude/
+/
 ├── skills/               # Skills (methodology, workflow, quality)
 ├── agents/               # Agents (validators, reviewers, creators)
 ├── commands/             # Slash commands
@@ -228,7 +228,7 @@ Write specifications before code. The hierarchy: User Spec → Tech Spec → Tas
 Max 3 fix iterations at each stage.
 
 ### Project Knowledge as Single Source of Truth
-Project documentation = `.claude/skills/project-knowledge/references/`. CLAUDE.md stays minimal — just a pointer. The `/done` command updates PK after every feature. The `documentation-writing` skill audits PK for bloat and quality.
+Project documentation = `.opencode/skills/project-knowledge/references/`. CLAUDE.md stays minimal — just a pointer. The `/done` command updates PK after every feature. The `documentation-writing` skill audits PK for bloat and quality.
 
 ### Just-In-Time Context
 Agent reads only what's needed for current task, not everything. Task files list their Context Files explicitly.

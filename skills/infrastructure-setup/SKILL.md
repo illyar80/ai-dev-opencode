@@ -13,9 +13,9 @@ description: |
 ## Gathering Project Context
 
 Read project-knowledge references:
-- `.claude/skills/project-knowledge/references/architecture.md` — tech stack, framework
-- `.claude/skills/project-knowledge/references/patterns.md` — code conventions, branching strategy, testing
-- `.claude/skills/project-knowledge/references/deployment.md` — deployment strategy
+- `.opencode/skills/project-knowledge/references/architecture.md` — tech stack, framework
+- `.opencode/skills/project-knowledge/references/patterns.md` — code conventions, branching strategy, testing
+- `.opencode/skills/project-knowledge/references/deployment.md` — deployment strategy
 
 If files lack needed info, search other project-knowledge references — info may exist under different names. If missing entirely, ask the user and immediately update the relevant doc.
 

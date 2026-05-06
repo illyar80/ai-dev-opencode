@@ -12,7 +12,7 @@ The orchestrator's context window is limited. Loading a skill, conversation hist
 
 ## Orchestration Rules
 
-Subagents cannot call other subagents — Claude Code supports only one level of orchestration. Nested calls fail silently:
+Subagents cannot call other subagents — OpenCode Code supports only one level of orchestration. Nested calls fail silently:
 
 ```
 Orchestrator (main skill)
@@ -112,13 +112,13 @@ Follow code-reviewing methodology.
 
 ## Agent File Format
 
-Agent files use YAML frontmatter + Markdown body. Store in `~/.claude/agents/{name}.md`.
+Agent files use YAML frontmatter + Markdown body. Store in `~/.opencode/agents/{name}.md`.
 
 ```yaml
 ---
 name: agent-name
 description: |
-  When Claude should delegate to this agent. Include:
+  When OpenCode should delegate to this agent. Include:
   - Purpose and capabilities
   - Example triggers
   - What NOT to use it for
@@ -145,7 +145,7 @@ allowed-tools: Read, Glob, Grep
 | Field | Description |
 |-------|-------------|
 | `name` | Unique identifier (kebab-case) |
-| `description` | When/why to use — Claude reads this to decide delegation |
+| `description` | When/why to use — OpenCode reads this to decide delegation |
 | `color` | Badge color for visual identification (see below) |
 | `skills` | Skill(s) to preload — agent must have methodology from skill |
 
@@ -223,7 +223,7 @@ Resume agent {agentId} to ask follow-up question about findings
 
 ## Writing Effective Descriptions
 
-The `description` field is critical — Claude uses it to decide when to delegate. Include:
+The `description` field is critical — OpenCode uses it to decide when to delegate. Include:
 
 1. **Purpose** — what the agent does
 2. **Triggers** — when to use (with examples)
@@ -275,17 +275,16 @@ Use `code-reviewer` subagent with:
 2. **Restrict tools** — Most agents only need `Read, Glob, Grep`
 3. **Use `model: inherit`** — Ensures maximum quality from orchestrator's model
 4. **Always preload skill** — Agent must have methodology, not just output format
-5. **Include examples in description** — Helps Claude know when to invoke
+5. **Include examples in description** — Helps OpenCode know when to invoke
 6. **One level of orchestration** — Subagents cannot call other subagents
 
 ## Example Agents
 
 See existing agents for full examples:
-- `~/.claude/agents/code-reviewer.md` — Detailed methodology with review dimensions
-- `~/.claude/agents/security-auditor.md` — OWASP-based security analysis
-- `~/.claude/agents/skill-checker.md` — Skill validation against standards
+- `~/.opencode/agents/code-reviewer.md` — Detailed methodology with review dimensions
+- `~/.opencode/agents/security-auditor.md` — OWASP-based security analysis
+- `~/.opencode/agents/skill-checker.md` — Skill validation against standards
 
 ## References
 
-- [Create custom subagents - Claude Code Docs](https://code.claude.com/docs/en/sub-agents)
-- [Multi-agent research system - Anthropic](https://www.anthropic.com/engineering/multi-agent-research-system)
+- [Create custom subagents - OpenCode Docs](https://opencode.ai/docs/agents/)

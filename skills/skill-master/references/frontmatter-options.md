@@ -8,7 +8,7 @@ These fields are NOT required for most skills. Use only when needed.
 |-------|---------|---------------------------------------------------------------|
 | `argument-hint` | None | Autocomplete hint shown after skill name                      |
 | `disable-model-invocation` | `false` | If `true`, skill only triggers manually via `/skill-name`     |
-| `user-invocable` | `true` | If `false`, skill hidden from `/` menu, only Claude can invoke |
+| `user-invocable` | `true` | If `false`, skill hidden from `/` menu, only OpenCode can invoke |
 | `allowed-tools` | All tools | Restrict which tools the skill can use                        |
 | `model` | `inherit` | Override model: `exlore`, `general`, `inherit`        |
 
@@ -29,7 +29,7 @@ User sees: `/fix-issue [issue-number]`
 
 ### disable-model-invocation
 
-Prevents Claude from auto-triggering the skill. Only manual `/skill-name` works.
+Prevents OpenCode from auto-triggering the skill. Only manual `/skill-name` works.
 
 ```yaml
 ---
@@ -42,7 +42,7 @@ Use for: destructive operations, expensive API calls, operations requiring expli
 
 ### user-invocable
 
-Hides skill from `/` menu. Only Claude can invoke it programmatically.
+Hides skill from `/` menu. Only OpenCode can invoke it programmatically.
 
 ```yaml
 ---

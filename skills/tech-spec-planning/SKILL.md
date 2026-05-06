@@ -24,7 +24,7 @@ Create technical specification through code research, adaptive clarification, an
 2. Read `work/{feature}/user-spec.md`. If missing — ask user to describe the task or create user-spec first.
    Extract `size: S|M|L` from user-spec frontmatter — it determines testing strategy depth in tech-spec.
 
-3. Read all files in `.claude/skills/project-knowledge/references/` (project.md, architecture.md, patterns.md, deployment.md, ux-guidelines.md, and any custom domain files). Missing files are fine — not all projects have all guides.
+3. Read all files in `.opencode/skills/project-knowledge/references/` (project.md, architecture.md, patterns.md, deployment.md, ux-guidelines.md, and any custom domain files). Missing files are fine — not all projects have all guides.
 
 4. user-spec.md is the single input source — all information from interview.yml and code research is already consolidated there.
 
@@ -61,7 +61,7 @@ Analyze if additional information is needed based on user-spec and code research
 
 1. Copy template to feature folder:
    ```bash
-   cp ~/.claude/shared/work-templates/tech-spec.md.template work/{feature}/tech-spec.md
+   cp ~/.shared/work-templates/tech-spec.md.template work/{feature}/tech-spec.md
    ```
    Then edit sections one by one using Edit tool. This keeps template structure and examples visible while you work.
 

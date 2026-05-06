@@ -75,7 +75,7 @@ Trigger eval queries prepared.
 
 ### 2a. Setup
 
-1. Create workspace: `~/.claude/skill-tests/{skill-name}/iteration-{N}/`
+1. Create workspace: `~/.opencode/skill-tests/{skill-name}/iteration-{N}/`
    (N = 1 for first run, increment for re-runs)
 2. Save test plan to workspace:
    - `evals.json` with all prompts and assertions
@@ -202,10 +202,10 @@ recorded.
 ### 4a. Evaluate trigger accuracy
 
 For each trigger eval query from `trigger-evals.json`:
-- Assess whether the skill's current description would cause Claude to
+- Assess whether the skill's current description would cause OpenCode to
   invoke the skill for this query
 - Consider: does the query's intent match the description's keywords and
-  contexts? Would Claude see this as the skill's domain?
+  contexts? Would OpenCode see this as the skill's domain?
 
 Categorize each query:
 - **True positive**: should-trigger → would trigger
@@ -248,7 +248,7 @@ The report includes:
 6. **Scripts to bundle** — if repeated code found across transcripts
 7. **Recommendations** — priority-ordered specific fixes for skill-master
 
-Save to: `~/.claude/skill-tests/{skill-name}/reports/{timestamp}-report.md`
+Save to: `~/.opencode/skill-tests/{skill-name}/reports/{timestamp}-report.md`
 
 Show report to user: "Here's the test report. Key findings: [summary].
 The report is at [path] — you can share it with skill-master to apply fixes."

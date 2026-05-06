@@ -5,10 +5,10 @@ How to design queries that test whether a skill's description triggers correctly
 ## Why This Matters
 
 The description field in SKILL.md frontmatter is the primary mechanism that
-determines whether Claude invokes a skill. Claude sees the skill's name +
+determines whether OpenCode invokes a skill. OpenCode sees the skill's name +
 description in its available_skills list and decides whether to consult it.
 
-Claude tends to **undertrigger** skills — not use them when they'd be useful.
+OpenCode tends to **undertrigger** skills — not use them when they'd be useful.
 This means false negatives (skill should trigger but doesn't) are the most
 costly failure mode: users won't discover the skill exists.
 
@@ -61,12 +61,12 @@ a column that shows the profit margin as a percentage"
 
 ### Substantive Queries
 
-Skills trigger for tasks Claude can't easily handle on its own. Simple,
+Skills trigger for tasks OpenCode can't easily handle on its own. Simple,
 one-step queries like "read this PDF" may not trigger a skill even if the
-description matches perfectly — Claude handles them directly with basic tools.
+description matches perfectly — OpenCode handles them directly with basic tools.
 
 Complex, multi-step, or specialized queries reliably trigger skills when the
-description matches. So eval queries should be substantive enough that Claude
+description matches. So eval queries should be substantive enough that OpenCode
 would actually benefit from consulting a skill.
 
 ## trigger-evals.json Format
@@ -87,9 +87,9 @@ would actually benefit from consulting a skill.
 ### Assessment Method
 
 For each query, assess whether the skill's current description would cause
-Claude to invoke it. Consider:
+OpenCode to invoke it. Consider:
 - Does the query's intent match the description's keywords?
-- Would Claude see this as the skill's domain based on description alone?
+- Would OpenCode see this as the skill's domain based on description alone?
 - Is the query substantive enough to warrant a skill consultation?
 
 ### Metrics

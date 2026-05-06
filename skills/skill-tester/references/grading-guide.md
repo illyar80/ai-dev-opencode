@@ -8,7 +8,7 @@ When spawning a grader, include these instructions in the prompt:
 
 ---
 
-You are a grader evaluating a test run of a Claude Code skill. Your job is
+You are a grader evaluating a test run of a OpenCode Code skill. Your job is
 to determine whether each assertion passed or failed based on evidence from
 the transcript.
 

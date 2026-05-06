@@ -38,7 +38,7 @@ Reason: when the lead does task work, it pollutes context with implementation de
      Read checkpoint, then read `work/{feature}/decisions.md` to confirm what was actually completed.
      For tasks in the resumed wave: if a task has a decisions.md entry, it completed — update its
      frontmatter to `done` and skip it. Only re-execute tasks without a decisions.md entry.
-     Check if `~/.claude/teams/{team_name}/config.json` exists: if yes, team is alive; if no,
+     Check if `~/.opencode/teams/{team_name}/config.json` exists: if yes, team is alive; if no,
      recreate via TeamCreate. Skip to Phase 2 starting from `next_wave`.
      Report to user: "Resuming from wave {N}. Waves 1-{N-1} completed."
    - `last_completed_wave: 0` → fresh start, proceed below.
@@ -58,7 +58,7 @@ Reason: when the lead does task work, it pollutes context with implementation de
 
    Build waves: group tasks by `wave` field. Within a wave, all tasks run in parallel.
 
-3. Build execution plan following template at `~/.claude/shared/work-templates/execution-plan.md.template`
+3. Build execution plan following template at `~/.shared/work-templates/execution-plan.md.template`
 4. Save to `work/{feature}/logs/execution-plan.md`
 5. Show plan to user, wait for approval
 6. Create team via TeamCreate
@@ -91,7 +91,7 @@ Reason: when the lead does task work, it pollutes context with implementation de
    {reviewers_block}
 
    After task complete:
-   - Write entry to {feature_dir}/decisions.md (follow template at ~/.claude/shared/work-templates/decisions.md.template).
+   - Write entry to {feature_dir}/decisions.md (follow template at ~/.shared/work-templates/decisions.md.template).
      Summary: 1-3 sentences describing what was done and key decisions. Link JSON reports for review details.
    - Message team lead: "Task {N} complete. decisions.md updated."
 

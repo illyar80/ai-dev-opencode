@@ -11,7 +11,7 @@ description: |
 
 ## About Skills
 
-Skills are modular, self-contained packages that extend Claude's capabilities by providing specialized knowledge, workflows, and tools. Think of them as "onboarding guides" for specific domains or tasks—they transform Claude from a general-purpose agent into a specialized agent equipped with procedural knowledge that no model can fully possess.
+Skills are modular, self-contained packages that extend OpenCode's capabilities by providing specialized knowledge, workflows, and tools. Think of them as "onboarding guides" for specific domains or tasks—they transform OpenCode from a general-purpose agent into a specialized agent equipped with procedural knowledge that no model can fully possess.
 
 ### What Skills Provide
 
@@ -22,7 +22,7 @@ Skills are modular, self-contained packages that extend Claude's capabilities by
 
 ## Skill Types
 
-There are two types of skills based on how they guide Claude's work.
+There are two types of skills based on how they guide OpenCode's work.
 
 ### Procedural Skills
 
@@ -89,7 +89,7 @@ skill-name/
 
 #### Description Best Practices
 
-Claude uses description to decide when to auto-invoke the skill. Be specific and include key terms.
+OpenCode uses description to decide when to auto-invoke the skill. Be specific and include key terms.
 
 **Template:**
 ```yaml
@@ -113,7 +113,7 @@ Why bad: Vague phrases ("work with docs"), no specific triggers.
 **Good:**
 ```yaml
 description: |
-  Manage .claude/skills/project-knowledge/ docs: create, check, update.
+  Manage .opencode/skills/project-knowledge/ docs: create, check, update.
 
   Use when: "заполни документацию", "создай документацию", "проверь документацию", "обнови документацию"
 ```
@@ -126,7 +126,7 @@ Why good: Specific actions, concrete trigger phrases.
 
 #### Undertriggering Problem
 
-Claude tends to undertrigger skills — not use them when they'd be useful. To combat this, make descriptions slightly "pushy": explicitly list contexts and keywords that should activate the skill, even non-obvious ones.
+OpenCode tends to undertrigger skills — not use them when they'd be useful. To combat this, make descriptions slightly "pushy": explicitly list contexts and keywords that should activate the skill, even non-obvious ones.
 
 **Instead of:**
 ```yaml
@@ -166,7 +166,7 @@ Executable code (Python/Bash/etc.) for tasks that require deterministic reliabil
 - **When to include**: When the same code is being rewritten repeatedly or deterministic reliability is needed
 - **Example**: `scripts/rotate_pdf.py` for PDF rotation tasks
 - **Benefits**: Token efficient, deterministic, may be executed without loading into context
-- **Note**: Scripts may still need to be read by Claude for patching or environment-specific adjustments
+- **Note**: Scripts may still need to be read by OpenCode for patching or environment-specific adjustments
 
 **Concrete example:** When building a `pdf-editor` skill for queries like "Help me rotate this PDF":
 1. Rotating a PDF requires re-writing the same code each time
@@ -233,12 +233,12 @@ Quality principles...
 
 #### Assets (`assets/`)
 
-Files not intended to be loaded into context, but rather used within the output Claude produces.
+Files not intended to be loaded into context, but rather used within the output OpenCode produces.
 
 - **When to include**: When the skill needs files that will be used in the final output
 - **Examples**: `assets/logo.png` for brand assets, `assets/slides.pptx` for PowerPoint templates, `assets/frontend-template/` for HTML/React boilerplate
 - **Use cases**: Templates, images, icons, boilerplate code, fonts, sample documents that get copied or modified
-- **Benefits**: Separates output resources from documentation, enables Claude to use files without loading them into context
+- **Benefits**: Separates output resources from documentation, enables OpenCode to use files without loading them into context
 
 **Concrete example:** When designing a `frontend-webapp-builder` skill for queries like "Build me a todo app":
 1. Writing a frontend webapp requires the same boilerplate HTML/React each time
@@ -248,9 +248,9 @@ Files not intended to be loaded into context, but rather used within the output 
 
 ### Concise is Key
 
-The context window is a public good. Skills share the context window with everything else Claude needs: system prompt, conversation history, other Skills' metadata, and the actual user request.
+The context window is a public good. Skills share the context window with everything else OpenCode needs: system prompt, conversation history, other Skills' metadata, and the actual user request.
 
-**Default assumption: Claude is already very smart.** Only add context Claude doesn't already have. Challenge each piece of information: "Does Claude really need this explanation?" and "Does this paragraph justify its token cost?"
+**Default assumption: OpenCode is already very smart.** Only add context OpenCode doesn't already have. Challenge each piece of information: "Does OpenCode really need this explanation?" and "Does this paragraph justify its token cost?"
 
 Prefer concise examples over verbose explanations.
 
@@ -276,7 +276,7 @@ Match the level of specificity to the task's fragility and variability:
 
 **Low freedom (specific scripts, few parameters)**: Use when operations are fragile and error-prone, consistency is critical, or a specific sequence must be followed.
 
-Think of Claude as exploring a path: a narrow bridge with cliffs needs specific guardrails (low freedom), while an open field allows many routes (high freedom).
+Think of OpenCode as exploring a path: a narrow bridge with cliffs needs specific guardrails (low freedom), while an open field allows many routes (high freedom).
 
 ### Progressive Disclosure
 
@@ -284,7 +284,7 @@ Skills use a three-level loading system to manage context efficiently:
 
 1. **Metadata (name + description)** — Always in context (~100 words)
 2. **SKILL.md body** — When skill triggers (<5k words)
-3. **Bundled resources** — As needed by Claude (unlimited, scripts execute without reading)
+3. **Bundled resources** — As needed by OpenCode (unlimited, scripts execute without reading)
 
 Keep SKILL.md body under 500 lines. Split content into separate files when approaching this limit. When splitting, reference them from SKILL.md and describe clearly when to read them.
 
@@ -306,7 +306,7 @@ Extract text with pdfplumber:
 For complete API reference, see [REFERENCE.md](REFERENCE.md) — all methods with examples.
 ```
 
-Claude loads FORMS.md or REFERENCE.md only when needed.
+OpenCode loads FORMS.md or REFERENCE.md only when needed.
 
 **Pattern 2: Domain-specific organization**
 
@@ -441,7 +441,7 @@ Use skill-checker subagent to validate the skill at {path}.
 If issues found → fix them → run skill-checker again.
 ```
 
-skill-checker is defined in `~/.claude/agents/skill-checker.md` and has skill-master preloaded.
+skill-checker is defined in `agents/skill-checker.md` and has skill-master preloaded.
 
 ### Test the Skill
 
